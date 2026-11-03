@@ -6,9 +6,9 @@ small, testable steps.
 
 ## Current status
 
-The first development step lays the groundwork: project setup, safe local
-configuration, and a desktop shell. Database setup and face recognition will
-be added in subsequent steps.
+The initial setup and environment-based MySQL configuration are in place.
+Database initialization and the desktop shell are being added in this phase;
+face recognition will follow later.
 
 ## Requirements
 
@@ -42,6 +42,18 @@ Do not commit passwords or other secrets. `.env.example` documents the
 supported settings; the application reads environment variables directly and
 does not load `.env` files.
 
+## Initialize the database
+
+After setting the MySQL environment variables, create the database and tables:
+
+```powershell
+python initialize_database.py
+```
+
+The database user needs permission to create the configured database and its
+tables. Initialization is safe to rerun; it creates missing tables without
+deleting existing records.
+
 ## Run
 
 ```powershell
@@ -50,7 +62,7 @@ python main.py
 
 ## Development milestones
 
-1. Establish project setup and configuration.
-2. Add a reusable MySQL connection and database initialization.
+1. Establish project setup and safe local configuration.
+2. Add configurable MySQL access and idempotent database initialization.
 3. Build the desktop application shell and database status check.
 4. Add person registration, face matching, attendance records, and reports.
