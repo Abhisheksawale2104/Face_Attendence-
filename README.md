@@ -6,9 +6,9 @@ small, testable steps.
 
 ## Current status
 
-The initial setup and environment-based MySQL configuration are in place.
-Database initialization and the desktop shell are being added in this phase;
-face recognition will follow later.
+The initial setup, environment-based MySQL configuration, database
+initialization, and desktop shell are in place. Face recognition and attendance
+workflows will be added in later steps.
 
 ## Requirements
 
